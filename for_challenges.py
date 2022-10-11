@@ -2,7 +2,9 @@
 # Необходимо вывести имена всех учеников из списка с новой строки
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+for name in names :
+    print(name)
+#print(names[0], names[1], names[2], names[3], sep='\n', end='\n\n')
 
 
 # Задание 2
@@ -12,7 +14,11 @@ names = ['Оля', 'Петя', 'Вася', 'Маша']
 # Петя: 4
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+
+for name in names :
+    print(f'{name} : {len(name)}')
+
+#print(f'{names[0]}: {len(names[0])}', f'{names[1]}: {len(names[1])}', f'{names[2]}: {len(names[2])}', f'{names[3]}: {len(names[3])}', sep='\n', end='\n\n')
 
 
 # Задание 3
@@ -25,11 +31,18 @@ is_male = {
     'Маша': False,
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+
+for item in is_male :
+    a = is_male[item]
+    if a == False :
+        print(f'{item} : Female', end='\n')
+    elif a == True :
+        print(f'{item} : Male', end='\n')
+
 
 
 # Задание 4
-# Даны группу учеников. Нужно вывести количество групп и для каждой группы – количество учеников в ней
+# Даны группы учеников. Нужно вывести количество групп и для каждой группы – количество учеников в ней
 # Пример вывода:
 # Всего 2 группы.
 # Группа 1: 2 ученика.
@@ -40,7 +53,12 @@ groups = [
     ['Вася', 'Маша', 'Саша', 'Женя'],
     ['Оля', 'Петя', 'Гриша'],
 ]
-# ???
+
+print(f'Всего {len(groups)} группы')
+
+for index, group in enumerate(groups) :
+    print(f'Группа {index+1}: {len(group)} ученика', end='\n')
+
 
 
 # Задание 5
@@ -54,4 +72,7 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
-# ???
+
+for index, group in enumerate(groups) :
+    b = ', '.join(group)
+    print(f'Группа {index+1}: {b}', end='\n')
